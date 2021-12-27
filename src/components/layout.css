@@ -1,0 +1,39 @@
+.img-col {
+  margin-bottom: 25px;
+}
+
+nav .container a {
+  text-decoration: none;
+  color: #000;
+}
+.hero {
+  min-height: 400px;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h1 {
+  color: #fff;
+  text-shadow: 5px 5px 25px #000;
+  text-transform: uppercase;
+  letter-spacing: 1.15rem;
+  font-weight: 400;
+}
+
+.hero .lead {
+  color: #e2e2e2;
+  text-shadow: 5px 5px 25px #000;
+  letter-spacing: 2px;
+  font-size: 16px;
+}
+
+.about-us-img {
+  max-height: 450px;
+  margin: auto;
+  box-shadow: 15px 15px 25px #0000003b;
+}
+
+.unstyled {
+  list-style: none;
+  padding-left: 0;
+}
