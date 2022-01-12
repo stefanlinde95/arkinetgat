@@ -1,43 +1,12 @@
 import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { graphql } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 import "bootstrap/dist/css/bootstrap.min.css"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const Pildid = () => {
-  const allImagesQuery = graphql`
-    query {
-      allFile(filter: { extension: { regex: "/(jpg)|(png)|(jpeg)/" } }) {
-        edges {
-          node {
-            id
-            base
-            childImageSharp {
-              fluid(
-                maxHeight: 200
-                maxWidth: 200
-                cropFocus: CENTER
-                fit: COVER
-                quality: 70
-              ) {
-                base64
-                aspectRatio
-                src
-                srcSet
-                sizes
-                originalImg
-              }
-            }
-          }
-        }
-      }
-    }
-  `
-  const {
-    allFile: { edges: images },
-  } = useStaticQuery(allImagesQuery)
-
+function Pildid({ data }) {
+  const images = data.allFile.edges
   return (
     <Layout>
       <Seo title="Pildid" />
@@ -47,24 +16,44 @@ const Pildid = () => {
             <h1>Tehtud tööd</h1>
           </div>
         </div>
-        <div className="row">
-          {images.map(image => (
-            <div className="img-col col-sm-12 col-md-6 col-lg-3" key={image.node.id}>
-              <a
-                href={image.node.childImageSharp.fluid.originalImg}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Img
-                  fluid={image.node.childImageSharp.fluid}
-                  alt={image.node.base.split(".")[0]}
-                />
-              </a>
-            </div>
-          ))}
-        </div>
       </div>
+      <section>
+        <div className="container">
+          <div className="row">
+            {images.map(image => (
+              <div
+                className="img-col col-sm-12 col-md-6 col-lg-3"
+                key={image.node.id}
+              >
+                <a href={image.node.publicURL} target="_blank">
+                  <GatsbyImage
+                    className="ratio ratio-1x1"
+                    image={image.node.childImageSharp.gatsbyImageData}
+                    alt={image.node.id}
+                  />
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </Layout>
   )
 }
+
+export const pageQuery = graphql`
+  query {
+    allFile(filter: { extension: { regex: "/(jpg)|(png)|(jpeg)/" } }) {
+      edges {
+        node {
+          childImageSharp {
+            gatsbyImageData(quality: 5)
+          }
+          id
+          publicURL
+        }
+      }
+    }
+  }
+`
 export default Pildid
