@@ -4,7 +4,6 @@ import Img from "gatsby-image"
 import "bootstrap/dist/css/bootstrap.min.css"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { Row, Col, Container } from "react-bootstrap"
 
 const Pildid = () => {
   const allImagesQuery = graphql`
@@ -42,15 +41,15 @@ const Pildid = () => {
   return (
     <Layout>
       <Seo title="Pildid" />
-      <Container className="my-5">
-        <Row className="mb-5">
-          <Col>
+      <div className="container my-5">
+        <div className="mb-5">
+          <div className="col-sm-12">
             <h1>Tehtud tööd</h1>
-          </Col>
-        </Row>
-        <Row>
+          </div>
+        </div>
+        <div>
           {images.map(image => (
-            <Col className="img-col" key={image.node.id} lg={3} md={6} sm={12}>
+            <div className="img-col col-sm-12 col-md-6 col-lg-3" key={image.node.id}>
               <a
                 href={image.node.childImageSharp.fluid.originalImg}
                 target="_blank"
@@ -61,10 +60,10 @@ const Pildid = () => {
                   alt={image.node.base.split(".")[0]}
                 />
               </a>
-            </Col>
+            </div>
           ))}
-        </Row>
-      </Container>
+        </div>
+      </div>
     </Layout>
   )
 }

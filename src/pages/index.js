@@ -2,7 +2,6 @@ import * as React from "react"
 import "bootstrap/dist/css/bootstrap.min.css"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { Row, Col, Container } from "react-bootstrap"
 import Hero from "../components/hero"
 import firstImg from "../assets/el-1.jpg"
 import secondImg from "../assets/el-2.jpg"
@@ -14,9 +13,9 @@ const IndexPage = () => {
       <Seo title="Avaleht" />
 
       <Hero />
-      <Container>
-        <Row className="py-5 mb-5 content">
-          <Col xs={12} md={8} lg={7} className="pt-5">
+      <div className="container">
+        <div className="row py-5 mb-5 content">
+          <div className="pt-5 col-sm-12 col-md-8 col-lg-7">
             <h1 className="mb-2">Arkinet puidust trepid</h1>
             <p className="intro">
               Oleme puittoodete valmistamisega tegelev ettevõte, tegutseme
@@ -47,8 +46,8 @@ const IndexPage = () => {
               width={250}
               className="py-4"
             />
-          </Col>
-          <Col xs={12} md={4} lg={5} className="mt-5">
+          </div>
+          <div className="mt-5 col-xs-12 col-md-4 col-lg-5">
             <div>
               <img
                 src={firstImg}
@@ -61,9 +60,9 @@ const IndexPage = () => {
                 alt="puidust trepp"
               />
             </div>
-          </Col>
-        </Row>
-      </Container>
+          </div>
+        </div>
+      </div>
     </Layout>
   )
 }
