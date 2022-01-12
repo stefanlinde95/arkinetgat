@@ -3,12 +3,11 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 import "bootstrap/dist/css/bootstrap.min.css"
-import { Container } from "react-bootstrap"
 
 const Header = ({ siteTitle }) => (
   <header>
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <Container>
+      <div className="container">
         <Link
           className="fs-5"
           style={{
@@ -31,7 +30,7 @@ const Header = ({ siteTitle }) => (
             Kontakt
           </Link>
         </div>
-      </Container>
+      </div>
     </nav>
   </header>
 )

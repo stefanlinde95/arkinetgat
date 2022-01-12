@@ -38,9 +38,9 @@ const Layout = ({ children }) => {
             marginTop: `2rem`,
           }}
         >
-          <Container>
-            <Row className="my-3">© {new Date().getFullYear()} Arkinet OÜ</Row>
-          </Container>
+          <div className="container">
+            <div className="row my-3">© {new Date().getFullYear()} Arkinet OÜ</div>
+          </div>
         </footer>
       </div>
     </>
