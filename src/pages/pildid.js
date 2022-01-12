@@ -47,7 +47,7 @@ const Pildid = () => {
             <h1>Tehtud tööd</h1>
           </div>
         </div>
-        <div>
+        <div className="row">
           {images.map(image => (
             <div className="img-col col-sm-12 col-md-6 col-lg-3" key={image.node.id}>
               <a
