@@ -1,10 +1,8 @@
 import React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { StaticImage } from "gatsby-plugin-image"
 import Hero from "../components/hero"
-import firstImg from "../assets/el-1.jpg"
-import secondImg from "../assets/el-2.jpg"
-import eu from "../assets/eu-maaelufond.jpg"
 
 const IndexPage = () => {
   return (
@@ -39,8 +37,8 @@ const IndexPage = () => {
               seeläbi tootmisprotsessi kiirendamine, mille tulemuseks on
               efektiivsem ja paindlikum töökorraldus.
             </p>
-            <img
-              src={eu}
+            <StaticImage
+              src="../assets/eu-maaelufond.jpg"
               alt="eu põllumajandusfond"
               width={250}
               className="py-4"
@@ -48,15 +46,19 @@ const IndexPage = () => {
           </div>
           <div className="mt-5 col-xs-12 col-md-4 col-lg-5">
             <div>
-              <img
-                src={firstImg}
+              <StaticImage
+                src="../assets/el-1.jpg"
+                placeholder="blurred"
                 className="about-us-img"
                 alt="arkinet puittrepid"
+                width={200}
               />
-              <img
-                src={secondImg}
+              <StaticImage
+                src="../assets/el-2.jpg"
+                placeholder="blurred"
                 className="about-us-img mt-5 mx-3"
                 alt="puidust trepp"
+                width={200}
               />
             </div>
           </div>
