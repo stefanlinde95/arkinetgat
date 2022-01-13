@@ -1,9 +1,9 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import "bootstrap/dist/css/bootstrap.min.css"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
 
 function Pildid({ data }) {
   const images = data.allFile.edges
@@ -19,22 +19,30 @@ function Pildid({ data }) {
       </div>
       <section>
         <div className="container">
-          <div className="row">
-            {images.map(image => (
-              <div
-                className="img-col col-sm-12 col-md-6 col-lg-3"
-                key={image.node.id}
-              >
-                <a href={image.node.publicURL} target="_blank">
-                  <GatsbyImage
-                    className="ratio ratio-1x1"
-                    image={image.node.childImageSharp.gatsbyImageData}
-                    alt={image.node.id}
-                  />
-                </a>
+          <SimpleReactLightbox>
+            <SRLWrapper>
+              <div className="row">
+                {images.map(image => (
+                  <div
+                    className="img-col col-sm-12 col-md-6 col-lg-3"
+                    key={image.node.id}
+                  >
+                    <a
+                      href={image.node.publicURL}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <GatsbyImage
+                        className="ratio ratio-1x1"
+                        image={image.node.childImageSharp.gatsbyImageData}
+                        alt={`https://arkinet.ee/${image.node.base}`}
+                      />
+                    </a>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </SRLWrapper>
+          </SimpleReactLightbox>
         </div>
       </section>
     </Layout>
@@ -51,6 +59,7 @@ export const pageQuery = graphql`
           }
           id
           publicURL
+          base
         }
       }
     }
