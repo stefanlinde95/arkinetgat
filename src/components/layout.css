@@ -6,15 +6,34 @@ nav .container a {
   text-decoration: none;
   color: #000;
 }
-.hero {
-  min-height: 400px;
-  align-items: center;
-  justify-content: center;
+
+@media only screen and (max-width: 600px) {
+  .hero {
+    display: none;
+  }
 }
-.mobile-hero {
-  min-height: 250px;
-  align-items: center;
-  justify-content: center;
+
+@media only screen and (min-width: 600px) {
+  .hero {
+    display: flex;
+    min-height: 400px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .mobile-hero {
+    display: flex;
+    min-height: 250px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .hero {
+    display: none;
+  }
 }
 
 .mobile-hero h1 {
