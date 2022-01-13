@@ -10,9 +10,9 @@ const IndexPage = () => {
       <Seo title="Avaleht" />
 
       <Hero />
-      <div className="container">
+      <div id="meist" className="container">
         <div className="row py-5 mb-5 content">
-          <div className="pt-5 col-sm-12 col-md-8 col-lg-7">
+          <div className="pt-5 col-sm-12 col-md-10 col-lg-7">
             <h1 className="mb-2">Arkinet puidust trepid</h1>
             <p className="intro">
               Oleme puittoodete valmistamisega tegelev ettevõte, tegutseme
@@ -40,23 +40,24 @@ const IndexPage = () => {
             <StaticImage
               src="../assets/eu-maaelufond.jpg"
               alt="eu põllumajandusfond"
-              width={250}
+              width={150}
               className="py-4"
+              objectFit="contain"
             />
           </div>
-          <div className="mt-5 col-xs-12 col-md-4 col-lg-5">
-            <div>
+          <div className="mt-5 col-xs-12 col-md-4 col-lg-5 d-md-block d-none">
+            <div className="row">
               <StaticImage
                 src="../assets/el-1.jpg"
                 placeholder="blurred"
-                className="about-us-img"
+                className="about-us-img d-none d-lg-block col-5"
                 alt="arkinet puittrepid"
                 width={200}
               />
               <StaticImage
                 src="../assets/el-2.jpg"
                 placeholder="blurred"
-                className="about-us-img mt-5 mx-3"
+                className="about-us-img mt-5 mx-3 d-none d-lg-block col-5"
                 alt="puidust trepp"
                 width={200}
               />

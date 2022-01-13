@@ -18,7 +18,7 @@ const Header = ({ siteTitle }) => (
           }}
           to="/"
         >
-          <img src={logo} alt={siteTitle} width={120} />
+          <img src={logo} alt={siteTitle} width={120} height={22} />
         </Link>
         <div>
           <Link className="mx-2" to="/">
