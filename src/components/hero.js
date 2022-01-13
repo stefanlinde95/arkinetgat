@@ -22,7 +22,7 @@ export default function Hero() {
       </div>
 
       <div
-        className="mobile-hero d-flex position-relative overflow-hidden text-center"
+        className="mobile-hero position-relative overflow-hidden text-center"
         style={{
           backgroundImage: `url(${forestMobile})`,
           backgroundRepeat: "no-repeat",

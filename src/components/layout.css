@@ -13,7 +13,7 @@ nav .container a {
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 601px) {
   .hero {
     display: flex;
     min-height: 400px;
@@ -30,8 +30,8 @@ nav .container a {
     justify-content: center;
   }
 }
-@media only screen and (min-width: 600px) {
-  .hero {
+@media only screen and (min-width: 601px) {
+  .mobile-hero {
     display: none;
   }
 }
