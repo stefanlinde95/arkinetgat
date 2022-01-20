@@ -35,7 +35,7 @@ function Pildid({ data }) {
                       <GatsbyImage
                         className="ratio ratio-1x1"
                         image={image.node.childImageSharp.gatsbyImageData}
-                        alt={`https://arkinet.ee/pildid/${image.node.base}`}
+                        alt={`https://arkinet.ee${image.node.publicURL}`}
                       />
                     </a>
                   </div>
