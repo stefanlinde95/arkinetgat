@@ -1,19 +1,24 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
+import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
+import { useTranslation } from "gatsby-plugin-react-i18next"
+
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
+import Galmenu from "../components/galmenu"
 
-function Pildid({ data }) {
+function Images({ data }) {
+  const { t } = useTranslation()
   const images = data.allFile.edges
   return (
     <Layout>
-      <Seo title="Pildid" />
+      <Seo title="Portfolio" />
       <div className="container my-5">
         <div className="mb-5">
           <div className="col-sm-12">
-            <h1>Tehtud tööd</h1>
+            <h1 className="text-center">{t("portfolio")}</h1>
+            <Galmenu />
           </div>
         </div>
       </div>
@@ -35,7 +40,7 @@ function Pildid({ data }) {
                       <GatsbyImage
                         className="ratio ratio-1x1"
                         image={image.node.childImageSharp.gatsbyImageData}
-                        alt={`https://arkinet.ee/pildid/${image.node.base}`}
+                        alt={`https://arkinetgatmaster.gatsbyjs.io${image.node.publicURL}`}
                       />
                     </a>
                   </div>
@@ -49,8 +54,24 @@ function Pildid({ data }) {
   )
 }
 
-export const pageQuery = graphql`
-  query {
+export default Images
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(
+      filter: {
+        language: { eq: $language }
+        fileAbsolutePath: { ne: "/images/" }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     allFile(filter: { extension: { regex: "/(jpg)|(png)|(jpeg)/" } }) {
       edges {
         node {
@@ -65,4 +86,3 @@ export const pageQuery = graphql`
     }
   }
 `
-export default Pildid

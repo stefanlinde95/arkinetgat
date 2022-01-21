@@ -1,10 +1,9 @@
 import React from "react"
-import "bootstrap/dist/css/bootstrap.min.css"
 import forest from "../assets/forest.jpg"
 import forestMobile from "../assets/forest-mobile.jpg"
 import down from "../assets/down.svg"
 
-export default function Hero() {
+export default function Hero({ subtitle }) {
   return (
     <div>
       <div
@@ -17,7 +16,7 @@ export default function Hero() {
       >
         <div className="my-5 mx-auto">
           <h1>Arkinet</h1>
-          <p className="lead fw-normal fs-4">Eesti puittööde meistrid</p>
+          <p className="lead fw-normal fs-4">{subtitle}</p>
         </div>
       </div>
 
@@ -31,7 +30,7 @@ export default function Hero() {
       >
         <div className="my-5 mx-auto d-sm-block d-md-none">
           <h1>Arkinet</h1>
-          <p className="lead fw-normal fs-4">Eesti puittööde meistrid</p>
+          <p className="lead fw-normal fs-4">{subtitle}</p>
           <a href="#meist">
             <img src={down} width={60} height={60} alt="next" />
           </a>
