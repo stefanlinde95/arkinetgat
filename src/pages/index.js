@@ -20,13 +20,6 @@ const IndexPage = () => {
             <p className="intro">{t("first_para")}</p>
             <p>{t("second_para")}</p>
             <p>{t("third_para")}</p>
-            <StaticImage
-              src="../assets/eu-maaelufond.jpg"
-              alt="eu põllumajandusfond"
-              width={150}
-              className="py-4"
-              objectFit="contain"
-            />
           </div>
           <div className="mt-5 col-xs-12 col-md-4 col-lg-5 d-md-block d-none">
             <div className="row">
