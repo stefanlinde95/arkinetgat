@@ -13,15 +13,15 @@ const IndexPage = () => {
     <Layout home={t("home")}>
       <Seo title={t("home")} />
       <Hero subtitle={t("subtitle")} />
-      <div id="meist" className="container">
+      <div id="about" className="container">
         <div className="row py-5 mb-5 content">
-          <div className="pt-5 col-sm-12 col-md-10 col-lg-7">
-            <h2 className="mb-2">{t("subtitle")}</h2>
+          <div className="pt-4 col-sm-12 col-md-10 col-lg-7">
+            <h2 className="py-2">{t("subtitle")}</h2>
             <p className="intro">{t("first_para")}</p>
             <p>{t("second_para")}</p>
             <p>{t("third_para")}</p>
           </div>
-          <div className="mt-5 col-xs-12 col-md-4 col-lg-5 d-md-block d-none">
+          <div className="mt-4 col-xs-12 col-md-4 col-lg-5 d-md-block d-none">
             <div className="row">
               <StaticImage
                 src="../assets/el-1.jpg"

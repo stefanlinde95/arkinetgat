@@ -9,7 +9,7 @@ const Header = ({ siteTitle }) => {
   const { languages, changeLanguage } = useI18next()
   return (
     <header>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg">
         <div className="container">
           <Link
             className="fs-5 py-2"
@@ -29,7 +29,7 @@ const Header = ({ siteTitle }) => {
             />
           </Link>
           <div className="d-flex align-items-center">
-            <Link className="mx-2" to="/">
+            <Link className="mx-2 d-none d-sm-block" to="/">
               {t("home")}
             </Link>
             <Link className="mx-2" to="/images">

@@ -1,0 +1,24 @@
+:root {
+  --arkinet-light: 242;
+  --arkinet-dark: 42;
+  --arkinet-theme-rgb: 122, 202, 62;
+  --arkinet-theme: rgb(var(--arkinet-theme-rgb));
+  --arkinet-separator-color: rgba(var(--arkinet-theme-rgb), 0.5);
+  --bs-light-rgb: var(--arkinet-light), var(--arkinet-light),
+    var(--arkinet-light);
+  --bs-dark-rgb: var(--arkinet-dark), var(--arkinet-dark), var(--arkinet-dark);
+  --bs-light: rgb(var(--bs-light-rgb));
+  --bs-dark: rgb(var(--bs-dark-rgb));
+  --bs-body-color: var(--bs-dark);
+  --bs-body-bg: var(--bs-light);
+}
+
+/* Dark mode *
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bs-body-color-rgb: var(--bs-light-rgb);
+    --bs-body-bg-rgb: var(--bs-dark-rgb);
+    --bs-body-color: var(--bs-light);
+    --bs-body-bg: var(--bs-dark);
+  }
+} /**/
