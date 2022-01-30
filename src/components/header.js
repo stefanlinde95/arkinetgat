@@ -4,8 +4,6 @@ import logo from "../assets/logo.svg"
 import { Link, useI18next } from "gatsby-plugin-react-i18next"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
-import "bootstrap/dist/css/bootstrap.min.css"
-
 const Header = ({ siteTitle }) => {
   const { t } = useTranslation()
   const { languages, changeLanguage } = useI18next()
