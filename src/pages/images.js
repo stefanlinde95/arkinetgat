@@ -15,12 +15,10 @@ function Images({ data }) {
     <Layout>
       <Seo title="Portfolio" />
       <div className="container my-5">
-        <div className="mb-5">
-          <div className="col-sm-12">
-            <h1 className="text-center">{t("portfolio")}</h1>
-            <Galmenu />
-          </div>
+        <div className="mb-4">
+          <h1>{t("portfolio")}</h1>
         </div>
+        <Galmenu />
       </div>
       <section>
         <div className="container">

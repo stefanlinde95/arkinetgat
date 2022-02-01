@@ -3,8 +3,9 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 
-import "./layout.css"
 import "bootstrap/dist/css/bootstrap.min.css"
+import "../style/bootstrap-override.css"
+import "./layout.css"
 
 const Layout = ({ children, home, contact, portfolio }) => {
   const data = useStaticQuery(graphql`
@@ -38,7 +39,9 @@ const Layout = ({ children, home, contact, portfolio }) => {
         >
           <div className="container">
             <div className="row my-3">
-              © {new Date().getFullYear()} Arkinet OÜ
+              <div className="col-12">
+                © {new Date().getFullYear()} Arkinet OÜ
+              </div>
             </div>
           </div>
         </footer>
