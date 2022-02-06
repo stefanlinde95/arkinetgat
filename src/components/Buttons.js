@@ -9,6 +9,7 @@ export default function Buttons({ term }) {
   useEffect(() => {
     console.log("useEffect triggered in Buttons")
     if (term) {
+      document.getElementById(term).scrollIntoView({ behavior: "smooth" })
       setTimeout(() => {
         inputRef.current.click()
       }, 1000)
