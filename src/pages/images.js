@@ -1,31 +1,26 @@
-import * as React from "react"
+import React from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
-import { useTranslation } from "gatsby-plugin-react-i18next"
-
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Galmenu from "../components/galmenu"
+import Buttons from "../components/Buttons"
 
 function Images({ data }) {
-  const { t } = useTranslation()
   const images = data.allFile.edges
+
+  const queryParams = new URLSearchParams(window.location.search)
+  const term = queryParams.get("id")
+
   return (
     <Layout>
       <Seo title="Portfolio" />
-      <div className="container my-5">
-        <div className="mb-4">
-          <h1>{t("portfolio")}</h1>
-        </div>
-        <Galmenu />
-      </div>
       <section>
         <div className="container">
           <SimpleReactLightbox>
             <SRLWrapper>
               <div className="row">
-                {images.map(image => (
+                {images.map((image, i) => (
                   <div
                     className="img-col col-sm-12 col-md-6 col-lg-3"
                     key={image.node.id}
@@ -38,13 +33,14 @@ function Images({ data }) {
                       <GatsbyImage
                         className="ratio ratio-1x1"
                         image={image.node.childImageSharp.gatsbyImageData}
-                        alt={`https://arkinetgatmaster.gatsbyjs.io${image.node.publicURL}`}
+                        alt={`https://example.com/images/?id=${++i}`}
                       />
                     </a>
                   </div>
                 ))}
               </div>
             </SRLWrapper>
+            <Buttons id="shared-img" term={term} />
           </SimpleReactLightbox>
         </div>
       </section>
