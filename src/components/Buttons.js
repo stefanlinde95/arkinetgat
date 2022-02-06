@@ -11,7 +11,7 @@ export default function Buttons({ term }) {
     if (term) {
       setTimeout(() => {
         inputRef.current.click()
-      }, 2000)
+      }, 1000)
     }
   }, [])
 
