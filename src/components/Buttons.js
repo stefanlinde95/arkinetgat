@@ -21,7 +21,7 @@ export default function Buttons({ term }) {
       <button
         className="shared-img"
         ref={inputRef}
-        onClick={() => openLightbox(openImg - 2)}
+        onClick={() => openLightbox(openImg - 1)}
       >
         Open the image
       </button>
