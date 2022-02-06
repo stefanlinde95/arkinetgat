@@ -1,7 +1,7 @@
 import { useLightbox } from "simple-react-lightbox"
 import React, { useRef, useEffect } from "react"
 
-export default function Buttons({ term, count }) {
+export default function Buttons({ term }) {
   const { openLightbox } = useLightbox()
   const openImg = parseInt(term)
   const inputRef = useRef(null)
