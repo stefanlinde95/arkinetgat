@@ -8,8 +8,8 @@ import Buttons from "../components/Buttons"
 
 function Images({ data }) {
   const images = data.allFile.edges
-
-  const queryParams = new URLSearchParams(window.location.search)
+  const isBrowser = () => typeof window !== "undefined"
+  const queryParams = new URLSearchParams(isBrowser() && window.location.search)
   const term = queryParams.get("id")
 
   return (
