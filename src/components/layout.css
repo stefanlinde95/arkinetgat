@@ -157,3 +157,7 @@ a:hover {
   text-shadow: 0 0 2px var(--arkinet-theme);
   transition: 0.5s;
 }
+
+.shared-img {
+  opacity: 0;
+}
