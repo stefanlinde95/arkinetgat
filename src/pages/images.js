@@ -22,6 +22,7 @@ function Images({ data }) {
               <div className="row">
                 {images.map((image, i) => (
                   <div
+                    id={++i}
                     className="img-col col-sm-12 col-md-6 col-lg-3"
                     key={image.node.id}
                   >
