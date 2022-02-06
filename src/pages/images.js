@@ -34,7 +34,7 @@ function Images({ data }) {
                       <GatsbyImage
                         className="ratio ratio-1x1"
                         image={image.node.childImageSharp.gatsbyImageData}
-                        alt={`https://arkinet.ee/images/?id=${++i}`}
+                        alt={`https://arkinet.ee/images/?id=${++i-1}`}
                       />
                     </a>
                   </div>
