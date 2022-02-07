@@ -12,7 +12,7 @@ export default function Buttons({ term }) {
       document.getElementById(term).scrollIntoView({ behavior: "smooth" })
       setTimeout(() => {
         inputRef.current.click()
-      }, 1000)
+      }, 2500)
     }
   }, [])
 
