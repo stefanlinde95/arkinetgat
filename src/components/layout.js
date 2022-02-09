@@ -1,6 +1,5 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 
 import "bootstrap/dist/css/bootstrap.min.css"
@@ -8,16 +7,6 @@ import "../style/bootstrap-override.css"
 import "./layout.css"
 
 const Layout = ({ children, home, contact, portfolio }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
     <>
       <Header
