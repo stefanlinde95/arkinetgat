@@ -10,9 +10,12 @@ import Buttons from "../components/Buttons"
 
 const IMAGES_PARENT_ID = "images"
 
+const isBrowser = () => typeof window !== "undefined"
+
 const encode = str => Buffer.from(str).toString("base64").substring(0, 12)
 
 const createUrlWithId = id => {
+  if (!isBrowser()) return
   const url = new URL(window.location.href)
   const params = url.searchParams
   params.set("id", id)
@@ -20,6 +23,7 @@ const createUrlWithId = id => {
 }
 
 const createUrlWithoutId = () => {
+  if (!isBrowser()) return
   const url = new URL(window.location.href)
   const params = url.searchParams
   params.delete("id")
@@ -27,6 +31,7 @@ const createUrlWithoutId = () => {
 }
 
 const setUrlByImageIndex = index => {
+  if (!isBrowser()) return
   const images = document.getElementById(IMAGES_PARENT_ID)?.children
   if (images?.length > index) {
     const imageId = images[index].id
@@ -35,13 +40,14 @@ const setUrlByImageIndex = index => {
 }
 
 const removeIdFromUrl = () => {
+  if (!isBrowser()) return
   window.history.replaceState(null, "", createUrlWithoutId())
 }
 
 function Images({ data }) {
   const { t } = useTranslation()
   const images = data.allFile.edges
-  const queryParams = new URLSearchParams(window?.location.search)
+  const queryParams = new URLSearchParams(isBrowser() && window.location.search)
   const queryImageId = queryParams.get("id")
 
   const getPictureDescription = imageRelativePath =>
