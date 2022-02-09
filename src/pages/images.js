@@ -6,7 +6,8 @@ import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Buttons from "../components/Buttons"
+import Buttons from "../components/buttons"
+import Galmenu from "../components/galmenu"
 
 const IMAGES_PARENT_ID = "images"
 
@@ -67,7 +68,11 @@ function Images({ data }) {
     <Layout>
       <Seo title="Portfolio" />
       <section>
-        <div className="container">
+        <div className="container my-5">
+          <div className="mb-4">
+            <h1>{t("portfolio")}</h1>
+          </div>
+          <Galmenu />
           <SimpleReactLightbox>
             <SRLWrapper options={lightboxOptions} callbacks={lightboxCallbacks}>
               <div id={IMAGES_PARENT_ID} className="row">

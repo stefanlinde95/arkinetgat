@@ -13,17 +13,12 @@ function Floors({ data }) {
   return (
     <Layout>
       <Seo title={t("floors")} />
-      <div className="container my-5">
-        <div className="mb-5">
-          <div className="col-sm-12">
-            <h1 className="text-center">{t("floors")}</h1>
-
-            <Galmenu />
-          </div>
-        </div>
-      </div>
       <section>
-        <div className="container">
+        <div className="container my-5">
+          <div className="mb-4">
+            <h1>{t("floors")}</h1>
+          </div>
+          <Galmenu />
           <SimpleReactLightbox>
             <SRLWrapper>
               <div className="row">

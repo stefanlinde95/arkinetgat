@@ -12,17 +12,13 @@ function Doors({ data }) {
   const images = data.allFile.edges
   return (
     <Layout>
-      <Seo title={t("stairs")} />
-      <div className="container my-5">
-        <div className="mb-5">
-          <div className="col-sm-12">
-            <h1 className="text-center">{t("doors")}</h1>
-            <Galmenu />
-          </div>
-        </div>
-      </div>
+      <Seo title={t("doors")} />
       <section>
-        <div className="container">
+        <div className="container my-5">
+          <div className="mb-4">
+            <h1>{t("doors")}</h1>
+          </div>
+          <Galmenu />
           <SimpleReactLightbox>
             <SRLWrapper>
               <div className="row">

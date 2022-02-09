@@ -1,6 +1,6 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import logo from "../assets/logo.svg"
+import logo from "../assets/logo_black.svg"
 import { Link, useI18next } from "gatsby-plugin-react-i18next"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
