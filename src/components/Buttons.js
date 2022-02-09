@@ -1,27 +1,41 @@
 import { useLightbox } from "simple-react-lightbox"
 import React, { useRef, useEffect } from "react"
 
-export default function Buttons({ term }) {
+const findIndexOfElement = element => {
+  return [...element.parentNode.children].indexOf(element)
+}
+
+const scrollToElement = elementId => {
+  document.getElementById(elementId)?.scrollIntoView({ behavior: "smooth" })
+}
+
+export default function Buttons({ queryImageId }) {
   const { openLightbox } = useLightbox()
-  const openImg = parseInt(term)
-  const inputRef = useRef(null)
+  const buttonRef = useRef(null)
+
+  const tryToOpenLightbox = elementId => {
+    const element = document.getElementById(elementId)
+    if (element) {
+      openLightbox(findIndexOfElement(element))
+    }
+  }
 
   useEffect(() => {
-    console.log("useEffect triggered in Buttons")
-    if (term) {
-      document.getElementById(term).scrollIntoView({ behavior: "smooth" })
+    console.log("useEffect triggered in Buttons for " + queryImageId)
+    if (queryImageId) {
+      scrollToElement(queryImageId)
       setTimeout(() => {
-        inputRef.current.click()
+        buttonRef.current.click()
       }, 2500)
     }
-  }, [])
+  }, [queryImageId])
 
   return (
     <>
       <button
         className="shared-img"
-        ref={inputRef}
-        onClick={() => openLightbox(openImg - 1)}
+        ref={buttonRef}
+        onClick={() => tryToOpenLightbox(queryImageId)}
       >
         Open the image
       </button>

@@ -1,17 +1,22 @@
 {
-    "home": "Avaleht",
-    "hero_title": "Arkinet puidutööd",
-    "subtitle": "Eesti puittööde meistrid",
-    "first_para": "Oleme puittoodete valmistamisega tegelev ettevõte, tegutseme alates 2002. aastast. Meie meeskonnas on oma tööd hästi tundvad tislerid. Oma tooteid oleme saatnud ja käinud ka ise paigaldamas nii Soomes, Rootsis kui ka Norras.",
-    "second_para": "Põhiosa toodangust moodustavad trepid. Samas teeme täispuidust mööblit, kohvikute-restoranide sisustust, köögimööblit ja palju erinevaid tellimustöid, mis on kas erimõõdus või kliendi enda omanäoliste kavandite järgi. Kasutame erinevaid puiduliike nagu mänd, tamm, saar, kask ja pöök – harvemini ka mahagoni, pähklit jt. liike. Viimistluseks kasutame peitse, õlisid ja lakke – treppide puhul eriti tugevat spetsiaalset trepilakki (Saksa toode).",
-    "third_para": "2017. aastal saime heakskiidu PRIA meetmele maapiirkonnas majandustegevuse mitmekesistamise investeeringutoetusele. Investeeringu eesmärgiks on puidutöötlusseadmete kaasajastamine ja seeläbi tootmisprotsessi kiirendamine, mille tulemuseks on efektiivsem ja paindlikum töökorraldus.",
-    "contact":"Kontakt",
-    "reg_nr":"Reg.: 10857552",
-    "kmkr":"KMKR: EE100749643",
-    "aadress":"Aadress: Vihtra tee 1, Suurejõe, 87602 Pärnumaa",
-    "portfolio": "Galerii",
-    "stairs": "Trepid",
-    "doors": "Uksed",
-    "all": "Kõik",
-    "floors": "Põrandad"
+  "home": "Avaleht",
+  "hero_title": "Arkinet puidutööd",
+  "subtitle": "Eesti puittööde meistrid",
+  "first_para": "Oleme puittoodete valmistamisega tegelev ettevõte, tegutseme alates 2002. aastast. Meie meeskonnas on oma tööd hästi tundvad tislerid. Oma tooteid oleme saatnud ja käinud ka ise paigaldamas nii Soomes, Rootsis kui ka Norras.",
+  "second_para": "Põhiosa toodangust moodustavad trepid. Samas teeme täispuidust mööblit, kohvikute-restoranide sisustust, köögimööblit ja palju erinevaid tellimustöid, mis on kas erimõõdus või kliendi enda omanäoliste kavandite järgi. Kasutame erinevaid puiduliike nagu mänd, tamm, saar, kask ja pöök – harvemini ka mahagoni, pähklit jt. liike. Viimistluseks kasutame peitse, õlisid ja lakke – treppide puhul eriti tugevat spetsiaalset trepilakki (Saksa toode).",
+  "third_para": "2017. aastal saime heakskiidu PRIA meetmele maapiirkonnas majandustegevuse mitmekesistamise investeeringutoetusele. Investeeringu eesmärgiks on puidutöötlusseadmete kaasajastamine ja seeläbi tootmisprotsessi kiirendamine, mille tulemuseks on efektiivsem ja paindlikum töökorraldus.",
+  "contact": "Kontakt",
+  "reg_nr": "Reg.: 10857552",
+  "kmkr": "KMKR: EE100749643",
+  "aadress": "Aadress: Vihtra tee 1, Suurejõe, 87602 Pärnumaa",
+  "portfolio": "Galerii",
+  "stairs": "Trepid",
+  "doors": "Uksed",
+  "all": "Kõik",
+  "floors": "Põrandad",
+  "pictureDescriptions": {
+    "stairs/stairs (1).jpg": "Trepike",
+    "carson-arias-7Z03R1wOdmI-unsplash.jpg": "Lego mehikeste pead veerevad",
+    "vicko-mozara-m82uh_vamhg-unsplash.jpg": "Täispuhutav flamingo"
+  }
 }
